@@ -1,6 +1,6 @@
 os:
   - osx
-language: php
+language: C++
 sudo: false
 addons:
   apt:
@@ -11,4 +11,4 @@ addons:
     - libxml2-dev
     - zlib1g-dev
     - libbz2-dev
-script: phpunit Test.php  &&  pwd  && ruby ./Hello.rb
+script: pwd && ruby ./Hello.rb
