@@ -1,8 +1,5 @@
 language: php
-php:
-  - 5.5
-  - 5.4
-  - hhvm
+sudo: false
 addons:
   apt:
     packages:
@@ -12,4 +9,8 @@ addons:
     - libxml2-dev
     - zlib1g-dev
     - libbz2-dev
+php:
+  - 5.5
+  - 5.4
+  - hhvm
 script: phpunit Test.php
