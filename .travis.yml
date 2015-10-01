@@ -11,4 +11,8 @@ addons:
     - libxml2-dev
     - zlib1g-dev
     - libbz2-dev
+
+before_install:
+ - pip install --user python-libsbml
+
 script: pwd && ruby ./Hello.rb
