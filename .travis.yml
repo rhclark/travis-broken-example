@@ -3,4 +3,13 @@ php:
   - 5.5
   - 5.4
   - hhvm
+addons:
+  apt:
+    packages:
+    - python-pip
+    - python-dev
+    - python-numpy
+    - libxml2-dev
+    - zlib1g-dev
+    - libbz2-dev
 script: phpunit Test.php
