@@ -1,3 +1,4 @@
+#!/usr/local/bin/ruby -w
 
 class HelloWorld
    def initialize(name)
