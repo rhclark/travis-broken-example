@@ -1,3 +1,5 @@
+os:
+  - osx
 language: php
 sudo: false
 addons:
