@@ -14,6 +14,6 @@ addons:
 
 before_install:
  - brew update
- - brew outdated Python || brew upgrade Python
+ - brew outdated python || brew upgrade python
 
 script: pwd && ruby ./Hello.rb
