@@ -16,6 +16,6 @@ before_install:
  - brew update
  - brew upgrade gcc 
  - brew install python
- - brew install numpy
+ - brew install python/numpy
 
 script: pwd && ruby ./Hello.rb
