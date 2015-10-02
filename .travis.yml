@@ -13,6 +13,7 @@ addons:
     - libbz2-dev
 
 before_install:
- - pip install --user python-libsbml
+ - brew update
+ - brew outdated Python || brew upgrade Python
 
 script: pwd && ruby ./Hello.rb
