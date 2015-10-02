@@ -1,21 +1,20 @@
 os:
   - osx
-language: C++
-sudo: false
-addons:
-  apt:
-    packages:
-    - python-pip
-    - python-dev
-    - python-numpy
-    - libxml2-dev
-    - zlib1g-dev
-    - libbz2-dev
-
-before_install:
- - brew update
- - brew upgrade gcc 
- - brew install python
- - brew install python/numpy
+  
+language:
+- objective-c
+env:
+  global:
+  - LATEST_TAG=1 # comment out to build version in submodule
+  matrix:
+  - VERSION=2.7.8 NUMPY_VERSION=1.7.1 # Because of pandas
+  - VERSION=3.3.5 NUMPY_VERSION=1.7.1
+  - VERSION=3.4.1 NUMPY_VERSION=1.7.1
+install:
+  - source terryfy/travis_tools.sh
+  - get_python_environment macpython $VERSION venv
+  - pip install delocate numpy==$NUMPY_VERSION
+  - pip install scipy cython wheel pandas patsy  
+  
 
 script: pwd && ruby ./Hello.rb
