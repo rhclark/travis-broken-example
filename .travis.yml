@@ -1,5 +1,5 @@
 os:
-  - Linux
+  - OSX
   
 language: python
 python:
@@ -15,11 +15,7 @@ before_install:
     - sudo apt-get install -y libxml2-dev
     - sudo apt-get install -y libz-dev
     - sudo apt-get install -y libbz2-dev
-    - sudo apt-get install -y --force-yes python-libsbml
-install: 
-    - pip install -r requirements.txt --use-mirrors
-    - pip install coverage
-    - pip install coveralls  
-  
+    - brew brew tap homebrew/science
+    - brew install libsbml
 
 script: pwd && ruby ./Hello.rb
