@@ -15,7 +15,8 @@ before_install:
     - sudo apt-get install -y libxml2-dev
     - sudo apt-get install -y libz-dev
     - sudo apt-get install -y libbz2-dev
+script:    
     - brew brew tap homebrew/science
     - brew install libsbml
-
-script: pwd && ruby ./Hello.rb
+    
+     pwd && ruby ./Hello.rb
