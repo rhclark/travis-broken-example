@@ -4,7 +4,7 @@ language:
 before_install:
 
     - brew update
-    - brew brew tap homebrew/science
+    - brew tap homebrew/science
     - brew install libsbml
     
 script:    
